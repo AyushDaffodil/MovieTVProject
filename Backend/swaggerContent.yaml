@@ -4,18 +4,10 @@ info:
   description: |
     This is a Movie and TV Show Store Server based on the OpenAPI 3.0 specification. You can find out more about
     Swagger at [https://swagger.io](https://swagger.io).   
-  termsOfService: https://swagger.io/terms/
-  contact:
-    email: apiteam@swagger.io
-  license:
-    name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.12
 externalDocs:
   description: Find out more about Swagger
   url: https://swagger.io
-servers:
-  - url: https://petstore3.swagger.io/api/v3
 tags:
   - name: Media_Content
     description: Everything about the Movie Or TV
