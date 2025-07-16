@@ -8,6 +8,8 @@ info:
 externalDocs:
   description: Find out more about Swagger
   url: https://swagger.io
+servers:
+  - url: http://localhost:5000/
 tags:
   - name: Media_Content
     description: Everything about the Movie Or TV
