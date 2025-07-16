@@ -1,0 +1,51 @@
+.HomeStyle {
+    margin-top: 120px;
+    width: 80%;
+}
+
+.HomeTab {
+    height: 40px;
+    width: 368px;
+    background-color: #00000033;
+    /* opacity: 20%; */
+    display: flex;
+    justify-content: space-around;
+    border-radius: 9px;
+    margin-top: 80px;
+    backdrop-filter: blur(24px);
+    padding: 8px;
+}
+
+.HomeIntro {
+    height: 150px;
+    width: 55%;
+    color: #EBEEF5;
+    margin-bottom: 24px;
+}
+
+.HomeIntro h1 {
+    font-size: 64px;
+}
+
+.HomeIntro h2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+.TabName {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -2%;
+    color: rgba(118, 126, 148, 1);
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.TabName span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}

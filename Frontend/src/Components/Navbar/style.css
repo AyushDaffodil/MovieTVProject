@@ -1,0 +1,21 @@
+.containerStyle2 {
+    background-color: #121829CC;
+    height: 60px;
+    width: 80%;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    backdrop-filter: blur(50px);
+}
+
+.ButtonGroup {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

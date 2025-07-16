@@ -1,0 +1,73 @@
+.HomeCard {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.AdjustPagination {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.pagination {
+    padding: 10px;
+    margin-top: 30px;
+    width: 40%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: none;
+    border-radius: 12px;
+}
+
+.pagination button {
+    border-radius: 50%;
+    padding: 4px 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(190, 189, 189);
+    outline: none;
+    border: none;
+    font-weight: 500;
+}
+
+.pagination button:hover {
+    background-color: gray;
+}
+
+.pagination h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: ghostwhite;
+}
+
+.disabling {
+    display: none;
+}
+
+.Totals {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: rgba(118, 126, 148, 1);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.Totals span {
+    color: rgba(118, 126, 148, 1);
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+}

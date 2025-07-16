@@ -1,0 +1,17 @@
+.containerStyle {
+    background-color: #121829;
+    background-image: url('../../Background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 200vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* .containerStyle::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent;
+} */

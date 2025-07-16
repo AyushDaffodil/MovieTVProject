@@ -1,0 +1,276 @@
+openapi: 3.0.4
+info:
+  title: Swagger Trending Movie and TV Show API 
+  description: |
+    This is a Movie and TV Show Store Server based on the OpenAPI 3.0 specification. You can find out more about
+    Swagger at [https://swagger.io](https://swagger.io).   
+  termsOfService: https://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.12
+externalDocs:
+  description: Find out more about Swagger
+  url: https://swagger.io
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+tags:
+  - name: Media_Content
+    description: Everything about the Movie Or TV
+    externalDocs:
+      description: Find out more
+      url: https://swagger.io
+paths:
+  /{id}:
+    post:
+      tags:
+        - Media_Content
+      summary: find by their IDs
+      description: Search an existing media by Id.
+      parameters:
+        - name: Media Id
+          in: path
+          description: ID of Media to return Individual Media data
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        required: true
+        description: mention the media type
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MediaType'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                anyOf:
+                  - $ref: '#/components/schemas/TV'
+                  - $ref: '#/components/schemas/Movie'
+  /all/{page}:
+    get:
+      tags:
+        - Media_Content
+      summary: get Some Trending Media
+      description: Movie And TV Trending On that time
+      parameters:
+        - name: PageNo
+          in: path
+          description: Page No To fetch Limited Data At a time
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Media'
+  route/movies/{page}:
+    get:
+      tags:
+        - Media_Content
+      summary: get Some Trending Movies
+      description: Trending Movies based on recent Time 
+      parameters:
+        - name: PageNo
+          in: path
+          description: Page No To fetch Limited Data At a time
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+  route/tv/{page}:
+    get:
+      tags:
+        - Media_Content
+      summary: get Some Trending TV Show
+      description: Trending TV based on recent Time 
+      parameters:
+        - name: PageNo
+          in: path
+          description: Page No To fetch Limited Data At a time
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TV'
+  route/search/{page}:
+    post:
+      tags:
+        - Media_Content
+      summary: Get the result on the basis of the Search Query
+      description: Specific Name Query
+      parameters:
+        - name: PageNo
+          in: path
+          description: Page No To fetch Limited Data At a time
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        required: true
+        description: Search data
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                val: 
+                  type: string
+                  description: Media name
+                  example: harry potter
+                querypath:
+                  type: string
+                  description: media type
+                  example: movie
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Media'
+components:
+  schemas:
+    Movie:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 23412
+        adult:
+          type: boolean
+          example: false
+        backdrop_path:
+          type: string
+          example: '/umDuQDCGrAFRkGqNEcKv5ap5d7p.jpg'
+        title:
+          type: string
+          example: Eden
+        original_title:
+          type: string
+          example: Eden
+        Overview:
+          type: string
+          example: Driven by a deep desire for change, a group of people left society to forge a new future in the harsh landscape of the Galapagos.
+        poster_path:
+          type: string
+          example: /a4eOEvtsunTot0p2L88VMcIpnQX.jpg
+        media_type:
+          type: string
+          example: Movie
+        original_language:
+          type: string
+          example: en
+        genre_ids:
+          type: array
+          items:
+            type: string
+        popularity: 
+          type: integer
+          format: int64
+          example: 29.1425
+        release_date:
+          type: string
+          format: date-time
+        video: 
+          type: boolean
+        vote_average:
+          type: integer
+        vote_count: 
+          type: integer
+    TV:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 23412
+        adult:
+          type: boolean
+        backdrop_path:
+          type: string
+          example: '/umDuQDCGrAFRkGqNEcKv5ap5d7p.jpg'
+        name:
+          type: string
+        original_name:
+          type: string
+        Overview:
+          type: string
+          example: Driven by a deep desire for change, a group of people left society to forge a new future in the harsh landscape of the Galapagos.
+        poster_path:
+          type: string
+          example: /a4eOEvtsunTot0p2L88VMcIpnQX.jpg
+        media_type:
+          type: string
+          example: TV
+        original_language:
+          type: string
+          example: en
+        genre_ids:
+          type: array
+          items:
+            type: string
+        popularity: 
+          type: integer
+          format: int64
+        first_air_date:
+          type: string
+          format: date-time
+        vote_average:
+          type: integer
+        vote_count: 
+          type: integer
+    Media:
+      required:
+        - page
+      type: object
+      properties:
+        page:
+          type: integer
+        results:
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/components/schemas/Movie"
+              - $ref: "#/components/schemas/TV"
+          example:
+            anyOf:
+              - $ref: "#/components/schemas/Movie"
+              - $ref: "#/components/schemas/TV"
+        total_pages:
+          type: integer
+          example: 1
+        total_results:
+          type: integer
+          example: 2000
+    MediaType:
+      type: object
+      properties:
+        category: 
+          type: string
+          example: movie

@@ -1,0 +1,40 @@
+.search {
+    width: 344px;
+    height: 35px;
+    gap: 16px;
+    border-radius: 12px;
+    border-width: 1px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid rgba(50, 59, 84, 1);
+}
+
+.search img {
+    width: 25px;
+    height: 25px;
+}
+
+.search input {
+    background: transparent;
+    border: none;
+    user-select: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    color: rgba(71, 80, 105, 1);
+    border-radius: 8px;
+    outline: none;
+}
+
+.ChangeColor input {
+    color: white;
+    font-size: 18px;
+}
