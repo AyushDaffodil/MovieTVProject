@@ -6,5 +6,6 @@ metadata:
   owner: ayush
 spec:
   type: service
+  owner: ayush
   lifecycle: production
   providesApis: []
