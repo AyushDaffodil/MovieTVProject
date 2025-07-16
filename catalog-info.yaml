@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1beta1
+kind: Component
+metadata:
+  name: movietvproject
+  description: Full-stack service
+  owner: ayush
+spec:
+  type: service
+  lifecycle: production
+  providesApis: []
