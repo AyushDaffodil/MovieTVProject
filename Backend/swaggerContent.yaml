@@ -23,20 +23,19 @@ tags:
       description: Find out more
       url: https://swagger.io
 paths:
-  /{id}:
+  /route/{id}:
     post:
       tags:
         - Media_Content
       summary: find by their IDs
       description: Search an existing media by Id.
       parameters:
-        - name: Media Id
+        - name: id
           in: path
           description: ID of Media to return Individual Media data
           required: true
           schema:
             type: integer
-            format: int64
       requestBody:
         required: true
         description: mention the media type
@@ -53,41 +52,40 @@ paths:
                 anyOf:
                   - $ref: '#/components/schemas/TV'
                   - $ref: '#/components/schemas/Movie'
-  /all/{page}:
+  /route/all/{page}:
     get:
       tags:
         - Media_Content
       summary: get Some Trending Media
       description: Movie And TV Trending On that time
       parameters:
-        - name: PageNo
+        - name: page
           in: path
           description: Page No To fetch Limited Data At a time
           required: true
           schema:
             type: integer
-            format: int64
       responses:
         '200':
           description: successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Media'
-  route/movies/{page}:
+                $ref: '#/components/schemas/Media' 
+   
+  /route/movies/{page}:
     get:
       tags:
         - Media_Content
       summary: get Some Trending Movies
       description: Trending Movies based on recent Time 
       parameters:
-        - name: PageNo
+        - name: page
           in: path
           description: Page No To fetch Limited Data At a time
           required: true
           schema:
             type: integer
-            format: int64
       responses:
         '200':
           description: successful operation
@@ -95,20 +93,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Movie'
-  route/tv/{page}:
+  /route/tv/{page}:
     get:
       tags:
         - Media_Content
       summary: get Some Trending TV Show
       description: Trending TV based on recent Time 
       parameters:
-        - name: PageNo
+        - name: page
           in: path
           description: Page No To fetch Limited Data At a time
           required: true
           schema:
             type: integer
-            format: int64
       responses:
         '200':
           description: successful operation
@@ -116,20 +113,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TV'
-  route/search/{page}:
+  /route/search/{page}:
     post:
       tags:
         - Media_Content
       summary: Get the result on the basis of the Search Query
       description: Specific Name Query
       parameters:
-        - name: PageNo
+        - name: page
           in: path
           description: Page No To fetch Limited Data At a time
           required: true
           schema:
             type: integer
-            format: int64
       requestBody:
         required: true
         description: Search data
