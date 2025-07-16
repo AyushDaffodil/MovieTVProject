@@ -8,4 +8,18 @@ spec:
   type: service
   owner: ayush
   lifecycle: production
-  providesApis: []
+  providesApis:
+    - movietv-api
+
+---
+apiVersion: backstage.io/v1beta1
+kind: API
+metadata:
+  name: movietv-api
+  description: MovieTV service API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: ayush
+  definition:
+    $text: https://raw.githubusercontent.com/AyushDaffodil/MovieTVProject/refs/heads/main/Backend/swaggerContent.yaml
