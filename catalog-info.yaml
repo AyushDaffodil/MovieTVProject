@@ -54,17 +54,5 @@ spec:
     displayName: Jenny Doe
     email: jenny-doe@example.com
     picture: https://example.com/staff/jenny-with-party-hat.jpeg
-  memberOf:
-    - default-team
+  memberOf: []
 
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: default-team
-spec:
-  type: team
-  profile:
-    displayName: Default Team
-  members:
-    - ayush
