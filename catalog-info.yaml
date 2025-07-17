@@ -10,6 +10,8 @@ spec:
   lifecycle: production
   providesApis:
     - movietv-api
+  dependsOn:
+    - api:default/tmdb-api
 
 ---
 apiVersion: backstage.io/v1beta1
@@ -23,3 +25,18 @@ spec:
   owner: ayush
   definition:
     $text: https://raw.githubusercontent.com/AyushDaffodil/MovieTVProject/refs/heads/main/Backend/swaggerContent.yaml
+
+
+---
+apiVersion: backstage.io/v1beta1
+kind: API
+metadata:
+  name: tmdb-api
+  description: "The Movie Database (TMDB) public API"
+  annotations:
+    backstage.io/managed-by-location: https://api.themoviedb.org
+spec:
+  type: openapi
+  lifecycle: production
+  owner: ayush
+
