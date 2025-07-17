@@ -5,7 +5,7 @@ metadata:
   description: Full-stack service
   owner: ayush
   annotations:
-    backstage.io/source-location: https://github.com/AyushDaffodil/MovieTVProject
+    backstage.io/source-location: url:https://github.com/AyushDaffodil/MovieTVProject
 spec:
   type: service
   owner: ayush
@@ -26,7 +26,7 @@ spec:
   lifecycle: production
   owner: ayush
   definition:
-    $text: https://raw.githubusercontent.com/AyushDaffodil/MovieTVProject/refs/heads/main/Backend/swaggerContent.yaml
+    $text: https://github.com/AyushDaffodil/MovieTVProject/blob/main/catalog-info.yaml
 
 
 ---
@@ -36,7 +36,7 @@ metadata:
   name: tmdb-api
   description: "The Movie Database (TMDB) public API"
   annotations:
-    backstage.io/managed-by-location: https://api.themoviedb.org
+    backstage.io/managed-by-location: url:https://api.themoviedb.org
 spec:
   type: openapi
   lifecycle: production
