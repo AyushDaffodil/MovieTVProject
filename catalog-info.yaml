@@ -3,12 +3,11 @@ kind: Component
 metadata:
   name: movietvproject
   description: Full-stack service
-  owner: ayush
   annotations:
     backstage.io/source-location: url:https://github.com/AyushDaffodil/MovieTVProject
 spec:
   type: service
-  owner: ayush
+  owner: user:default/ayush
   lifecycle: production
   providesApis:
     - movietv-api
