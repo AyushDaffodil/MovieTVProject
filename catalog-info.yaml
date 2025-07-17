@@ -5,7 +5,7 @@ metadata:
   description: Full-stack service
   annotations:
     backstage.io/source-location: url:https://github.com/AyushDaffodil/MovieTVProject
-    backstage.io/techdocs-ref: dir:docs
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: user:default/ayush
