@@ -4,6 +4,8 @@ metadata:
   name: movietvproject
   description: Full-stack service
   owner: ayush
+  annotations:
+    backstage.io/source-location: https://github.com/AyushDaffodil/MovieTVProject
 spec:
   type: service
   owner: ayush
@@ -41,3 +43,15 @@ spec:
   owner: ayush
   definition: 
     $text: https://raw.githubusercontent.com/ckatle/oas-tmdb/master/openapi.yml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ayush
+spec:
+  profile:
+    displayName: Jenny Doe
+    email: jenny-doe@example.com
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+
