@@ -39,4 +39,5 @@ spec:
   type: openapi
   lifecycle: production
   owner: ayush
-
+  definition: 
+    $text: https://raw.githubusercontent.com/ckatle/oas-tmdb/master/openapi.yml
